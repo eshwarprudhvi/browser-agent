@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Check Required</title>
+</head>
+<body>
+    <h1>Security Check</h1>
+    <div id="human-verification">
+        <p>Verify you are human to proceed.</p>
+        <button id="solve-btn" onclick="simulateVerification()">Complete Verification</button>
+    </div>
+    <div id="status">Verification Required</div>
+
+    <script>
+        function simulateVerification() {
+            const challenge = document.getElementById('human-verification');
+            if (challenge) challenge.remove();
+            document.title = "Verification Completed - Welcome";
+            document.getElementById('status').innerText = "Access Granted";
+        }
+    </script>
+</body>
+</html>

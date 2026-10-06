@@ -1,0 +1,24 @@
+[project]
+name = "browser-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Prudhvishwar", email = "eshwarprudhvi2005@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "chromium>=0.0.0",
+    "langchain>=1.4.3",
+    "langgraph>=1.2.14",
+    "playwright>=1.63.0",
+    "python-dotenv>=1.2.4",
+    "tavily-python>=0.8.5",
+]
+
+[project.scripts]
+browser-agent = "browser_agent:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"

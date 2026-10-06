@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Agent Milestone 4 Test Page</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        .clicked { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Milestone 4: Page Inspection and Click Test</h1>
+    <p>This is a deterministic test fixture for element inspection and clicking.</p>
+
+    <div>
+        <button id="continue" onclick="handleClick()">Continue</button>
+        <a id="example-link" href="https://example.com">Example Link</a>
+        <input type="text" id="username" name="user" placeholder="Enter username" />
+    </div>
+
+    <div id="status">Not clicked</div>
+
+    <script>
+        function handleClick() {
+            const statusEl = document.getElementById('status');
+            statusEl.innerText = 'Button clicked successfully!';
+            statusEl.className = 'clicked';
+        }
+    </script>
+</body>
+</html>
